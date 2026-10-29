@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-label="AAVASA - A Stay That Feels Like Home">
+  <rect width="420" height="120" fill="#FAF8F4"/>
+  <g transform="translate(18 14) scale(1.4)">
+    <circle cx="46" cy="18" r="4.6" fill="#D8B4A0"/>
+    <path d="M14 51V31a18 18 0 0 1 36 0v20" fill="none" stroke="#52634E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21 38h22" stroke="#52634E" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M27 51V44.5a5 5 0 0 1 10 0V51" fill="#DCE7DD" stroke="#78866B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 46c-4-3-5-8-4-12 4 1 7 4 8 9" fill="#78866B" opacity="0.85"/>
+    <path d="M54 46c4-3 5-8 4-12-4 1-7 4-8 9" fill="#78866B" opacity="0.85"/>
+    <path d="M6 55c8-4 14 2 26-1s18-3 26 0" fill="none" stroke="#78866B" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <text x="122" y="64" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="38" letter-spacing="9" fill="#292D29">AAVASA</text>
+  <text x="124" y="88" font-family="'DM Sans', Arial, sans-serif" font-size="10.5" letter-spacing="3.2" fill="#52634E">A STAY THAT FEELS LIKE HOME</text>
+</svg>

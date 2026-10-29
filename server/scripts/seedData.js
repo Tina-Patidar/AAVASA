@@ -1,0 +1,323 @@
+/**
+ * Demo catalogue for AAVASA.
+ *
+ * IMPORTANT: every property below is FICTIONAL and exists only to demonstrate the platform.
+ * Photographs come from Unsplash and are illustrative; they do not depict real partner properties.
+ * Ratings are flagged `ratingIsDemo: true` and sample reviews are shown with a "Sample review" label.
+ */
+
+const u = (id, alt, w = 1400) => ({
+  url: `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=70`,
+  alt,
+});
+
+export const hotels = [
+  {
+    name: 'Kesari Haveli',
+    tagline: 'A restored courtyard haveli in the heart of the Pink City',
+    description:
+      'Kesari Haveli is a demo heritage property imagined around a sandstone courtyard, hand-painted arches and a rooftop that catches the evening light over the old city. Rooms keep their jharokha windows and carved wooden doors, while the bathrooms and beds are thoroughly modern. Breakfast is served under the neem tree, and the evening thali is cooked by the same family kitchen every night.',
+    propertyType: 'Heritage Haveli',
+    starCategory: 4,
+    city: 'Jaipur',
+    state: 'Rajasthan',
+    address: 'Demo address: Chandpole Bazaar Road, Jaipur, Rajasthan 302001',
+    location: { lat: 26.9239, lng: 75.8267 },
+    images: [
+      u('photo-1564501049412-61c2a3083791', 'Heritage haveli bedroom with carved wooden furniture'),
+      u('photo-1566073771259-6a8506099945', 'Courtyard pool surrounded by arches'),
+      u('photo-1618773928121-c32242e63f39', 'Warm-toned bedroom with soft linen'),
+      u('photo-1584132967334-10e028bd69f7', 'Quiet lounge corner in the haveli'),
+    ],
+    amenities: ['Free Wi-Fi', 'Restaurant', 'Breakfast Included', 'Air Conditioning', 'Garden', 'Airport Transfer', 'Swimming Pool'],
+    policies: { checkInTime: '14:00', checkOutTime: '11:00', freeCancellationHours: 48 },
+    rating: 4.7,
+    reviewCount: 128,
+    featured: true,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 5, comment: 'The courtyard at sunrise felt like a private museum. Staff remembered our names by the second morning.', stay: '3 nights, couple' },
+      { author: 'Sample guest', rating: 4, comment: 'Beautiful rooms and an excellent breakfast. The street outside is lively, so ask for a courtyard-facing room.', stay: '2 nights, friends' },
+    ],
+    rooms: [
+      { name: 'Courtyard Room', description: 'Overlooks the central courtyard with a painted ceiling and a daybed by the window.', pricePerNight: 5200, maxGuests: 2, totalRooms: 8, sizeSqFt: 280, amenities: ['Queen Bed', 'Garden View', 'Rain Shower', 'Tea & Coffee Maker'] },
+      { name: 'Haveli Suite', description: 'A two-level suite with a sitting area and a private jharokha balcony.', pricePerNight: 8900, maxGuests: 3, totalRooms: 4, sizeSqFt: 460, amenities: ['King Bed', 'Private Balcony', 'Living Area', 'Bathtub'] },
+      { name: 'Royal Family Suite', description: 'Two connecting bedrooms around a shared terrace, ideal for families.', pricePerNight: 13500, maxGuests: 5, totalRooms: 2, sizeSqFt: 720, amenities: ['King Bed', 'Twin Beds', 'Private Balcony', 'Living Area'] },
+    ],
+  },
+  {
+    name: 'Deodar Ridge Retreat',
+    tagline: 'Cedar-lined cottages above the Beas valley',
+    description:
+      'Perched on a quiet ridge, Deodar Ridge is a demo mountain retreat of eight timber cottages, each facing the snow line. Mornings begin with tea on the veranda, afternoons with a short walk through apple orchards, and evenings around a stone fire pit. Kitchens focus on local Himachali dishes: siddu, trout and slow-cooked rajma.',
+    propertyType: 'Mountain Retreat',
+    starCategory: 4,
+    city: 'Manali',
+    state: 'Himachal Pradesh',
+    address: 'Demo address: Old Manali Road, Manali, Himachal Pradesh 175131',
+    location: { lat: 32.2432, lng: 77.1892 },
+    images: [
+      u('photo-1470770841072-f978cf4d019e', 'Wooden cottage beside a mountain lake'),
+      u('photo-1506905925346-21bda4d32df4', 'Snow-capped mountain range at dawn'),
+      u('photo-1505693416388-ac5ce068fe85', 'Cosy bedroom with wood panelling'),
+      u('photo-1587985064135-0366536eab42', 'Neatly made bed with woollen blankets'),
+    ],
+    amenities: ['Free Wi-Fi', 'Restaurant', 'Breakfast Included', 'Bonfire', 'Parking', 'Garden', 'Pet Friendly'],
+    policies: { checkInTime: '13:00', checkOutTime: '11:00', freeCancellationHours: 72, cancellation: 'Free cancellation up to 72 hours before check-in because of seasonal road conditions. After that, the first night is charged.' },
+    rating: 4.6,
+    reviewCount: 96,
+    featured: true,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 5, comment: 'Woke up to snow on the peaks and a hot chai at the door. The bonfire evenings were the highlight.', stay: '4 nights, family' },
+    ],
+    rooms: [
+      { name: 'Pine Cottage', description: 'A snug cottage with a wood stove and valley-facing windows.', pricePerNight: 6800, maxGuests: 2, totalRooms: 5, sizeSqFt: 300, amenities: ['Queen Bed', 'Mountain View', 'Tea & Coffee Maker'] },
+      { name: 'Ridge View Cottage', description: 'Larger cottage with a private veranda and a bathtub with a view.', pricePerNight: 9400, maxGuests: 3, totalRooms: 3, sizeSqFt: 420, amenities: ['King Bed', 'Mountain View', 'Private Balcony', 'Bathtub'] },
+      { name: 'Family Loft', description: 'Two-storey loft with a children’s sleeping area under the eaves.', pricePerNight: 12200, maxGuests: 5, totalRooms: 2, sizeSqFt: 640, amenities: ['King Bed', 'Twin Beds', 'Living Area', 'Mountain View'] },
+    ],
+  },
+  {
+    name: 'Salt & Palm Villas',
+    tagline: 'Whitewashed beach villas a barefoot walk from the sea',
+    description:
+      'Salt & Palm is a demo beachside property of twelve airy villas set among coconut palms in south Goa. Rooms are finished in lime-washed walls, cane furniture and handloom textiles. Spend the day between the infinity pool and the quiet beach, and end it with grilled catch of the day at the sand-floor restaurant.',
+    propertyType: 'Beach Villa',
+    starCategory: 4,
+    city: 'Goa',
+    state: 'Goa',
+    address: 'Demo address: Palolem Beach Road, Canacona, Goa 403702',
+    location: { lat: 15.0100, lng: 74.0232 },
+    images: [
+      u('photo-1507525428034-b723cf961d3e', 'Quiet tropical beach with palm trees'),
+      u('photo-1540541338287-41700207dee6', 'Resort pool with loungers at golden hour'),
+      u('photo-1596394516093-501ba68a0ba6', 'Beach villa terrace with cane furniture'),
+      u('photo-1578683010236-d716f9a3f461', 'Bright bedroom with white linen'),
+    ],
+    amenities: ['Free Wi-Fi', 'Swimming Pool', 'Restaurant', 'Bar & Lounge', 'Spa', 'Air Conditioning', 'Breakfast Included', 'Yoga Deck'],
+    policies: { checkInTime: '14:00', checkOutTime: '11:00', freeCancellationHours: 48 },
+    rating: 4.5,
+    reviewCount: 211,
+    featured: true,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 5, comment: 'Slow mornings, quiet beach, great seafood. We extended our stay twice.', stay: '5 nights, couple' },
+      { author: 'Sample guest', rating: 4, comment: 'Lovely pool and villas. The walk to the beach is short but uneven after dark.', stay: '3 nights, friends' },
+    ],
+    rooms: [
+      { name: 'Palm Garden Room', description: 'Ground-floor room opening onto a private garden patio.', pricePerNight: 7200, maxGuests: 2, totalRooms: 6, sizeSqFt: 320, amenities: ['Queen Bed', 'Garden View', 'Rain Shower'] },
+      { name: 'Pool Villa', description: 'Villa with direct pool access and an outdoor shower.', pricePerNight: 11800, maxGuests: 3, totalRooms: 4, sizeSqFt: 520, amenities: ['King Bed', 'Pool Access', 'Private Balcony', 'Rain Shower'] },
+      { name: 'Seaview Family Villa', description: 'Two bedrooms and a wide terrace facing the water.', pricePerNight: 16500, maxGuests: 6, totalRooms: 2, sizeSqFt: 860, amenities: ['King Bed', 'Twin Beds', 'Sea View', 'Living Area'] },
+    ],
+  },
+  {
+    name: 'The Lotus Courtyard',
+    tagline: 'A lakeside boutique hotel with lotus-filled courtyards',
+    description:
+      'The Lotus Courtyard is a demo boutique hotel set around three interlinked courtyards a short walk from the lake. White marble, brass lamps and soft sage walls make the rooms feel quiet and cool. The rooftop restaurant looks across the water to the hills, and sunset tea is served daily on the terrace.',
+    propertyType: 'Boutique Hotel',
+    starCategory: 5,
+    city: 'Udaipur',
+    state: 'Rajasthan',
+    address: 'Demo address: Lal Ghat Lane, Udaipur, Rajasthan 313001',
+    location: { lat: 24.5764, lng: 73.6833 },
+    images: [
+      u('photo-1542314831-068cd1dbfeeb', 'Elegant hotel facade at dusk'),
+      u('photo-1582719508461-905c673771fd', 'Spacious suite with a large bed and warm lighting'),
+      u('photo-1571896349842-33c89424de2d', 'Quiet pool framed by stone walls'),
+      u('photo-1414235077428-338989a2e8c0', 'Rooftop restaurant table set for dinner'),
+    ],
+    amenities: ['Free Wi-Fi', 'Restaurant', 'Bar & Lounge', 'Spa', 'Swimming Pool', 'Air Conditioning', 'Airport Transfer', 'Breakfast Included'],
+    policies: { checkInTime: '14:00', checkOutTime: '12:00', freeCancellationHours: 96, cancellation: 'Free cancellation up to 96 hours before check-in during the wedding season. After that, the first night is charged.' },
+    rating: 4.8,
+    reviewCount: 174,
+    featured: true,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 5, comment: 'Thoughtful in every small way. The rooftop dinner was the best meal of our trip.', stay: '2 nights, couple' },
+    ],
+    rooms: [
+      { name: 'Lotus Deluxe Room', description: 'Calm room with sage walls and a view over the lotus pond.', pricePerNight: 9800, maxGuests: 2, totalRooms: 7, sizeSqFt: 340, amenities: ['King Bed', 'Garden View', 'Work Desk', 'Mini Bar'] },
+      { name: 'Lake Terrace Suite', description: 'Suite with a private terrace and a deep soaking tub.', pricePerNight: 15500, maxGuests: 3, totalRooms: 3, sizeSqFt: 560, amenities: ['King Bed', 'Private Balcony', 'Bathtub', 'Living Area'] },
+      { name: 'Maharani Suite', description: 'The signature suite with a dining nook and panoramic windows.', pricePerNight: 24000, maxGuests: 4, totalRooms: 1, sizeSqFt: 900, amenities: ['King Bed', 'Living Area', 'Bathtub', 'Private Balcony'] },
+    ],
+  },
+  {
+    name: 'Chai Estate Retreat',
+    tagline: 'Plantation bungalows among rolling tea slopes',
+    description:
+      'Chai Estate is a demo resort built around a colonial-style plantation bungalow in the Western Ghats. Guests stay in garden cottages that look onto tea terraces, join the morning leaf-picking walk, and learn how a cup of Munnar tea is made from leaf to pot. Cool mist, birdsong and slow afternoons are all part of the stay.',
+    propertyType: 'Resort',
+    starCategory: 4,
+    city: 'Munnar',
+    state: 'Kerala',
+    address: 'Demo address: Top Station Road, Munnar, Kerala 685612',
+    location: { lat: 10.0889, lng: 77.0595 },
+    images: [
+      u('photo-1469474968028-56623f02e42e', 'Misty green hills at sunrise'),
+      u('photo-1445019980597-93fa8acb246c', 'Resort bungalow surrounded by greenery'),
+      u('photo-1611892440504-42a792e24d32', 'Garden cottage bedroom with white bedding'),
+      u('photo-1544124499-58912cbddaad', 'Terrace seating overlooking the hills'),
+    ],
+    amenities: ['Free Wi-Fi', 'Restaurant', 'Breakfast Included', 'Spa', 'Garden', 'Parking', 'Yoga Deck'],
+    policies: { checkInTime: '14:00', checkOutTime: '11:00', freeCancellationHours: 48 },
+    rating: 4.6,
+    reviewCount: 83,
+    featured: false,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 5, comment: 'The tea walk at 7 am was unforgettable. Rooms are warm and the food is generous.', stay: '3 nights, family' },
+    ],
+    rooms: [
+      { name: 'Tea Garden Cottage', description: 'Cottage with a verandah facing the terraced slopes.', pricePerNight: 5800, maxGuests: 2, totalRooms: 8, sizeSqFt: 310, amenities: ['Queen Bed', 'Garden View', 'Tea & Coffee Maker'] },
+      { name: 'Planter’s Bungalow Room', description: 'Period-style room in the main bungalow with a fireplace.', pricePerNight: 8300, maxGuests: 3, totalRooms: 3, sizeSqFt: 450, amenities: ['King Bed', 'Mountain View', 'Bathtub'] },
+    ],
+  },
+  {
+    name: 'Ganga Ghat House',
+    tagline: 'A slow-living riverside guesthouse for yoga and quiet',
+    description:
+      'Ganga Ghat House is a demo boutique stay on the banks of the river in Rishikesh. A small yoga deck opens at sunrise, the library fills with afternoon light, and the kitchen serves simple, seasonal vegetarian meals. It is built for people who want to read, stretch, walk by the water and do very little else.',
+    propertyType: 'Boutique Hotel',
+    starCategory: 3,
+    city: 'Rishikesh',
+    state: 'Uttarakhand',
+    address: 'Demo address: Tapovan Ghat Road, Rishikesh, Uttarakhand 249192',
+    location: { lat: 30.1263, lng: 78.3223 },
+    images: [
+      u('photo-1544124499-58912cbddaad', 'Riverside terrace with morning light'),
+      u('photo-1520250497591-112f2f40a3f4', 'Calm outdoor pool surrounded by plants'),
+      u('photo-1590490360182-c33d57733427', 'Minimal bedroom with natural tones'),
+      u('photo-1560448204-e02f11c3d0e2', 'Reading corner with soft cushions'),
+    ],
+    amenities: ['Free Wi-Fi', 'Yoga Deck', 'Restaurant', 'Breakfast Included', 'Garden', 'Pet Friendly'],
+    policies: { checkInTime: '12:00', checkOutTime: '10:00', freeCancellationHours: 24 },
+    rating: 4.4,
+    reviewCount: 61,
+    featured: false,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 4, comment: 'Peaceful, clean and honest. Morning yoga with the river sounds is worth the trip alone.', stay: '4 nights, solo' },
+    ],
+    rooms: [
+      { name: 'River Room', description: 'Simple room with a window seat facing the river.', pricePerNight: 3600, maxGuests: 2, totalRooms: 6, sizeSqFt: 240, amenities: ['Queen Bed', 'Garden View', 'Work Desk'] },
+      { name: 'Ghat Suite', description: 'A larger room with a balcony and a reading nook.', pricePerNight: 5400, maxGuests: 3, totalRooms: 3, sizeSqFt: 350, amenities: ['King Bed', 'Private Balcony', 'Rain Shower'] },
+    ],
+  },
+  {
+    name: 'Marine Lane Residency',
+    tagline: 'A quiet city hotel moments from the sea promenade',
+    description:
+      'Marine Lane Residency is a demo city hotel for travellers who want calm after a busy day. Rooms are soundproofed and warmly lit, the lobby café opens early, and the sea promenade is a short walk away. Business desks, fast Wi-Fi and a late checkout option make it equally good for work trips and weekend breaks.',
+    propertyType: 'City Hotel',
+    starCategory: 4,
+    city: 'Mumbai',
+    state: 'Maharashtra',
+    address: 'Demo address: Netaji Subhash Road, Marine Lines, Mumbai, Maharashtra 400002',
+    location: { lat: 18.9432, lng: 72.8238 },
+    images: [
+      u('photo-1551882547-ff40c63fe5fa', 'Modern city hotel lobby with warm lighting'),
+      u('photo-1590490360182-c33d57733427', 'Comfortable hotel room with a work desk'),
+      u('photo-1584132967334-10e028bd69f7', 'Hotel corridor with soft lighting'),
+      u('photo-1414235077428-338989a2e8c0', 'Restaurant table in a hotel dining room'),
+    ],
+    amenities: ['Free Wi-Fi', 'Gym', 'Restaurant', 'Bar & Lounge', 'Air Conditioning', 'Parking', 'Airport Transfer', 'Breakfast Included'],
+    policies: { checkInTime: '15:00', checkOutTime: '12:00', freeCancellationHours: 24, cancellation: 'Free cancellation up to 24 hours before check-in. After that, the first night is charged.' },
+    rating: 4.3,
+    reviewCount: 302,
+    featured: false,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 4, comment: 'Quiet rooms, quick check-in and a surprisingly good breakfast. Great for a work trip.', stay: '2 nights, business' },
+    ],
+    rooms: [
+      { name: 'Classic Room', description: 'Compact, quiet room with a work desk and blackout curtains.', pricePerNight: 6500, maxGuests: 2, totalRooms: 12, sizeSqFt: 250, amenities: ['Queen Bed', 'Work Desk', 'Tea & Coffee Maker'] },
+      { name: 'Executive Room', description: 'Higher floor, larger desk and lounge seating.', pricePerNight: 8800, maxGuests: 2, totalRooms: 6, sizeSqFt: 320, amenities: ['King Bed', 'Work Desk', 'Mini Bar'] },
+      { name: 'Family Residence', description: 'Two-room residence with a sofa bed and a pantry.', pricePerNight: 12600, maxGuests: 4, totalRooms: 2, sizeSqFt: 560, amenities: ['King Bed', 'Twin Beds', 'Living Area'] },
+    ],
+  },
+  {
+    name: 'Upper Lake Retreat',
+    tagline: 'A lakeview resort with gardens and long, easy weekends',
+    description:
+      'Upper Lake Retreat is a demo resort built around lawns that slope towards the water. Suites open onto garden terraces, the pool is shaded by old mango trees, and the restaurant serves Malwa and Bhopali classics alongside simple continental dishes. It is a relaxed base for exploring the old city, ancient caves and nearby wildlife reserves.',
+    propertyType: 'Resort',
+    starCategory: 4,
+    city: 'Bhopal',
+    state: 'Madhya Pradesh',
+    address: 'Demo address: Lake View Road, Shamla Hills, Bhopal, Madhya Pradesh 462013',
+    location: { lat: 23.2599, lng: 77.4126 },
+    images: [
+      u('photo-1571896349842-33c89424de2d', 'Resort swimming pool beside manicured lawns'),
+      u('photo-1445019980597-93fa8acb246c', 'Garden resort with seating under trees'),
+      u('photo-1578683010236-d716f9a3f461', 'Airy bedroom with garden view'),
+      u('photo-1559599101-f09722fb4948', 'Open-air restaurant table setting'),
+    ],
+    amenities: ['Free Wi-Fi', 'Swimming Pool', 'Restaurant', 'Gym', 'Garden', 'Parking', 'Air Conditioning', 'Breakfast Included', 'Spa'],
+    policies: { checkInTime: '14:00', checkOutTime: '11:00', freeCancellationHours: 48 },
+    rating: 4.4,
+    reviewCount: 74,
+    featured: false,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 4, comment: 'Spacious grounds and attentive staff. The lakeside lawn is perfect in the evening.', stay: '2 nights, family' },
+    ],
+    rooms: [
+      { name: 'Garden Room', description: 'Comfortable room opening onto the resort lawns.', pricePerNight: 4800, maxGuests: 2, totalRooms: 10, sizeSqFt: 300, amenities: ['Queen Bed', 'Garden View', 'Work Desk'] },
+      { name: 'Lakeview Suite', description: 'Corner suite with a balcony facing the lake.', pricePerNight: 7600, maxGuests: 3, totalRooms: 4, sizeSqFt: 480, amenities: ['King Bed', 'Private Balcony', 'Living Area', 'Bathtub'] },
+      { name: 'Family Villa', description: 'Self-contained villa with two bedrooms and a private lawn.', pricePerNight: 11200, maxGuests: 5, totalRooms: 2, sizeSqFt: 780, amenities: ['King Bed', 'Twin Beds', 'Garden View', 'Living Area'] },
+    ],
+  },
+  {
+    name: 'Kovalam Cove Resort',
+    tagline: 'A cliff-top resort above a crescent of palm-lined sand',
+    description:
+      'Kovalam Cove is a demo beach resort stepping down a green cliff to a sheltered cove. Terraced rooms face the Arabian Sea, the Ayurveda centre offers unhurried treatments, and the restaurant serves Kerala fish curry cooked to the family recipe. It is a place for slow breakfasts, long swims and sunsets from the cliff-edge deck.',
+    propertyType: 'Resort',
+    starCategory: 5,
+    city: 'Kovalam',
+    state: 'Kerala',
+    address: 'Demo address: Lighthouse Beach Road, Kovalam, Kerala 695527',
+    location: { lat: 8.4004, lng: 76.9787 },
+    images: [
+      u('photo-1519046904884-53103b34b206', 'Beach cove with soft sand and calm water'),
+      u('photo-1540541338287-41700207dee6', 'Infinity pool overlooking the sea'),
+      u('photo-1596394516093-501ba68a0ba6', 'Resort terrace with sea breeze'),
+      u('photo-1618773928121-c32242e63f39', 'Elegant room with warm bedding'),
+    ],
+    amenities: ['Free Wi-Fi', 'Swimming Pool', 'Spa', 'Restaurant', 'Bar & Lounge', 'Air Conditioning', 'Airport Transfer', 'Yoga Deck', 'Breakfast Included'],
+    policies: { checkInTime: '14:00', checkOutTime: '12:00', freeCancellationHours: 72 },
+    rating: 4.7,
+    reviewCount: 142,
+    featured: true,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 5, comment: 'Waking up to the sound of the sea and an Ayurvedic massage in the afternoon. Perfect.', stay: '5 nights, couple' },
+    ],
+    rooms: [
+      { name: 'Cove Room', description: 'Terraced room with a balcony facing the cove.', pricePerNight: 9200, maxGuests: 2, totalRooms: 8, sizeSqFt: 360, amenities: ['King Bed', 'Sea View', 'Private Balcony', 'Rain Shower'] },
+      { name: 'Cliff Pool Suite', description: 'Suite with a small private plunge pool on the cliff edge.', pricePerNight: 18500, maxGuests: 3, totalRooms: 3, sizeSqFt: 620, amenities: ['King Bed', 'Sea View', 'Pool Access', 'Bathtub'] },
+    ],
+  },
+  {
+    name: 'Blue Door Haveli',
+    tagline: 'A small blue-washed guesthouse under the fort walls',
+    description:
+      'Blue Door Haveli is a demo guesthouse of just nine rooms in a century-old blue-washed house below the fort. The terrace restaurant looks across a sea of blue rooftops, and the owners happily plan walking routes, cooking classes and sunrise viewpoints. Simple, warm and unfussy.',
+    propertyType: 'Heritage Haveli',
+    starCategory: 3,
+    city: 'Jodhpur',
+    state: 'Rajasthan',
+    address: 'Demo address: Navchokiya Lane, Brahmpuri, Jodhpur, Rajasthan 342001',
+    location: { lat: 26.2975, lng: 73.0186 },
+    images: [
+      u('photo-1590490360182-c33d57733427', 'Simple bedroom with warm light'),
+      u('photo-1564501049412-61c2a3083791', 'Heritage room with carved wooden bed'),
+      u('photo-1584132967334-10e028bd69f7', 'Quiet lounge in the guesthouse'),
+      u('photo-1414235077428-338989a2e8c0', 'Terrace dining table at dusk'),
+    ],
+    amenities: ['Free Wi-Fi', 'Restaurant', 'Breakfast Included', 'Air Conditioning', 'Airport Transfer'],
+    policies: { checkInTime: '12:00', checkOutTime: '10:00', freeCancellationHours: 48 },
+    rating: 4.5,
+    reviewCount: 119,
+    featured: false,
+    sampleReviews: [
+      { author: 'Sample guest', rating: 5, comment: 'Warm family hosts and a rooftop view that never gets old.', stay: '2 nights, solo' },
+    ],
+    rooms: [
+      { name: 'Blue Room', description: 'Whitewashed room with a window facing the old lanes.', pricePerNight: 3200, maxGuests: 2, totalRooms: 5, sizeSqFt: 220, amenities: ['Queen Bed', 'Work Desk'] },
+      { name: 'Fort View Room', description: 'Top-floor room with a private view of the fort.', pricePerNight: 4600, maxGuests: 3, totalRooms: 3, sizeSqFt: 300, amenities: ['King Bed', 'Private Balcony', 'Tea & Coffee Maker'] },
+    ],
+  },
+];

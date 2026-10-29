@@ -1,0 +1,18 @@
+# Optional Render blueprint for the API. You can also create the service by hand (see README).
+services:
+  - type: web
+    name: aavasa-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false        # paste your MongoDB Atlas connection string in the Render dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false        # your Vercel URL, e.g. https://aavasa.vercel.app
